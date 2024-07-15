@@ -20,7 +20,7 @@ void calcularPi(int inicio, int quantidadeTermos, double *resultado, int numeroT
     *resultado = valorPi;
     tempoFim = clock();
     double segundos = ((double)tempoFim - tempoInicio) / CLOCKS_PER_SEC;
-    printf("Execução em %d threads e %f segundos\n", numeroThreads, segundos);
+    printf("Execucao em %d threads e %f segundos\n", numeroThreads, segundos);
 }
 
 int main(){
@@ -30,7 +30,9 @@ int main(){
     double resultadoPi;
     int numeroThreads;
 
+    printf("Insira a quantidade de termos: ");
     scanf("%d", &quantidadeTermos);
+    printf("Insira a quantidade de threads: ");
     scanf("%d", &numeroThreads);
 
     calcularPi(inicio, quantidadeTermos, &resultadoPi, numeroThreads);
